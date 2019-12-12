@@ -10,7 +10,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World").font(.title).foregroundColor(.green)
+        VStack{
+            Button(action: {
+                print("hello world");
+            }){
+            Text("Batiments")
+                .foregroundColor(.white)
+                .font(.subheadline)
+                .background(Color.red)
+            }
+            
+            Button(action: {
+                print("Hello world 2");
+            }){
+                Text("Évènements").foregroundColor(.white).font(.subheadline).background(Color.red)
+            }
+            
+            Button(action: {
+                print("hello word 3")
+            }){
+                Text("Informations générales").foregroundColor(.white).background(Color.red)
+            }
+        }
+    
     }
 }
 

@@ -14,6 +14,10 @@
 		4E2E8E29239F9DA4009BF7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2E8E27239F9DA4009BF7F6 /* LaunchScreen.storyboard */; };
 		4E2E8E34239F9DA5009BF7F6 /* monitoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E33239F9DA5009BF7F6 /* monitoringTests.swift */; };
 		4E2E8E3F239F9DA5009BF7F6 /* monitoringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E3E239F9DA5009BF7F6 /* monitoringUITests.swift */; };
+		4E2E8E4D23A0DBFE009BF7F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E4C23A0DBFE009BF7F6 /* LoginView.swift */; };
+		4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */; };
+		4E2E8E5123A113BF009BF7F6 /* MainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */; };
+		4E2E8E5323A117C6009BF7F6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		4E2E8E3A239F9DA5009BF7F6 /* monitoringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monitoringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2E8E3E239F9DA5009BF7F6 /* monitoringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monitoringUITests.swift; sourceTree = "<group>"; };
 		4E2E8E40239F9DA5009BF7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2E8E4C23A0DBFE009BF7F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfiguration.swift; sourceTree = "<group>"; };
+		4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				4E2E8E27239F9DA4009BF7F6 /* LaunchScreen.storyboard */,
 				4E2E8E2A239F9DA4009BF7F6 /* Info.plist */,
 				4E2E8E24239F9DA4009BF7F6 /* Preview Content */,
+				4E2E8E4C23A0DBFE009BF7F6 /* LoginView.swift */,
+				4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */,
+				4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */,
+				4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */,
 			);
 			path = monitoring;
 			sourceTree = "<group>";
@@ -264,6 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2E8E4D23A0DBFE009BF7F6 /* LoginView.swift in Sources */,
+				4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */,
+				4E2E8E5323A117C6009BF7F6 /* ApiRequest.swift in Sources */,
+				4E2E8E5123A113BF009BF7F6 /* MainConfiguration.swift in Sources */,
 				4E2E8E21239F9DA2009BF7F6 /* ContentView.swift in Sources */,
 				4E2E8E1F239F9DA2009BF7F6 /* AppDelegate.swift in Sources */,
 			);

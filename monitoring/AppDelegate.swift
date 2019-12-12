@@ -12,22 +12,37 @@ import SwiftUI
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow?;
+    var jwtToken: String = "";
+    
 
-
+    var keyChainService = KeyChainService();
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+                    let window = UIWindow(frame: UIScreen.main.bounds)
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Use a UIHostingController as window root view controller.
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: contentView)
+        if(getLoginFromSecureStorage()){
+            let view1 = ContentView();
+            window.rootViewController = UIHostingController(rootView: view1)
+        } else {
+            let view2 = LoginView()
+            window.rootViewController = UIHostingController(rootView: view2)
+        }
         self.window = window
         window.makeKeyAndVisible()
         return true
     }
 
+    private func getLoginFromSecureStorage() -> Bool {
+     //   keyChainService.save("123456", for: "userJwtToken")
+        if(keyChainService.retriveToken(for: "userJwtToken2") != nil) {
+            jwtToken = keyChainService.retriveToken(for: "userJwtToken2")!;
+            return true
+        }
+            return false
+        
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
