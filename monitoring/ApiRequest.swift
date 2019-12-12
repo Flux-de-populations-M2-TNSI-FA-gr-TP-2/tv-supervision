@@ -10,9 +10,9 @@ import Foundation
 
 class ApiRequest {
     
-    static var server: String = "http://127.0.0.1/";
+    static var server: String = "https://fluxtnsi.ddns.net/api/";
     
-    static public func callApi(url: String, method: String, header: String, body: String) -> String {
+    /*static public func callApi(url: String, method: String, header: String, body: String) -> String {
         // on crée l'url pour interroger l'API
         let url = ApiRequest.server + url;
         let request = NSMutableURLRequest(url: URL(string: url)!)
@@ -33,6 +33,6 @@ class ApiRequest {
         }
         requestAPI.resume()
         return result
-    }
+    }*/
     
 }

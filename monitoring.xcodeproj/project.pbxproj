@@ -18,6 +18,8 @@
 		4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */; };
 		4E2E8E5123A113BF009BF7F6 /* MainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */; };
 		4E2E8E5323A117C6009BF7F6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */; };
+		4E33917323A24EFE00D1E14D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33917223A24EFE00D1E14D /* User.swift */; };
+		4E33917523A27D9700D1E14D /* background-apple-tv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E33917423A27D9700D1E14D /* background-apple-tv.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfiguration.swift; sourceTree = "<group>"; };
 		4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		4E33917223A24EFE00D1E14D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		4E33917423A27D9700D1E14D /* background-apple-tv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background-apple-tv.jpg"; path = "../../../../../../../Downloads/background-apple-tv.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		4E2E8E1D239F9DA1009BF7F6 /* monitoring */ = {
 			isa = PBXGroup;
 			children = (
+				4E33917423A27D9700D1E14D /* background-apple-tv.jpg */,
 				4E2E8E1E239F9DA2009BF7F6 /* AppDelegate.swift */,
 				4E2E8E20239F9DA2009BF7F6 /* ContentView.swift */,
 				4E2E8E22239F9DA4009BF7F6 /* Assets.xcassets */,
@@ -115,6 +120,7 @@
 				4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */,
 				4E2E8E5023A113BF009BF7F6 /* MainConfiguration.swift */,
 				4E2E8E5223A117C6009BF7F6 /* ApiRequest.swift */,
+				4E33917223A24EFE00D1E14D /* User.swift */,
 			);
 			path = monitoring;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E33917523A27D9700D1E14D /* background-apple-tv.jpg in Resources */,
 				4E2E8E29239F9DA4009BF7F6 /* LaunchScreen.storyboard in Resources */,
 				4E2E8E26239F9DA4009BF7F6 /* Preview Assets.xcassets in Resources */,
 				4E2E8E23239F9DA4009BF7F6 /* Assets.xcassets in Resources */,
@@ -282,6 +289,7 @@
 				4E2E8E5123A113BF009BF7F6 /* MainConfiguration.swift in Sources */,
 				4E2E8E21239F9DA2009BF7F6 /* ContentView.swift in Sources */,
 				4E2E8E1F239F9DA2009BF7F6 /* AppDelegate.swift in Sources */,
+				4E33917323A24EFE00D1E14D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
