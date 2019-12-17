@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
                     let window = UIWindow(frame: UIScreen.main.bounds)
-        // Create the SwiftUI view that provides the window contents.
+        
+        // on vérifie si le token est stocké dans la keychain, si oui, on affiche le contentView, sinon on affiche la page de login
         if(getLoginFromSecureStorage()){
             let view1 = ContentView();
             window.rootViewController = UIHostingController(rootView: view1)
@@ -35,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func getLoginFromSecureStorage() -> Bool {
         //keyChainService.save("123456", for: "userJwtToken")
+     if( keyChainService.delete(for: "access_token")){
+            print("token deleted")
+        }
         if(keyChainService.retriveToken(for: "access_token") != nil) {
             jwtToken = keyChainService.retriveToken(for: "access_token")!;
             return true

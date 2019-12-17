@@ -15,5 +15,6 @@ class User {
     private email :String
     private password :String
     
-}
-*/
+    
+}*/
+
