@@ -15,19 +15,20 @@ final class BuildingListViewModel : ObservableObject {
     init(){
         fetchBuildings()
     }
-    
-    var buildings = [Building]() {
-        didSet {
-            didChange.send(self)
+
+    var objectWillChange = PassthroughSubject<Void, Never>()
+
+    var buildings: [Building] = [] {
+        willSet {
+            self.objectWillChange.send()
         }
     }
     
     private func fetchBuildings() {
         WebService().getAllBuildings{
             self.buildings = $0
+            print("list: \(self.buildings)")
         }
     }
-    
-    let didChange = PassthroughSubject<BuildingListViewModel,Never>()
     
 }

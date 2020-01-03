@@ -7,14 +7,22 @@
 //
 
 import Foundation
-/*
-class User {
+
+class User : Codable, Identifiable {
     
-    private firstname :String
-    private lastname :String
-    private email :String
-    private password :String
+    var id: Int = -1
+    var firstname :String? = ""
+    var lastname :String? = ""
+    var email :String = ""
+    var password :String = ""
     
+    init(id: Int, firstname: String, lastname: String, email: String, password: String){
+        self.id = id
+        self.firstname = firstname
+        self.lastname = lastname
+        self.email = email
+        self.password = password
+    }
     
-}*/
+}
 

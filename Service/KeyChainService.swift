@@ -47,7 +47,7 @@ class KeyChainService {
         let _ = SecItemCopyMatching(query as CFDictionary, &retriveData)
         guard let data = retriveData as? Data else { return nil }
         let token = String(data: data, encoding: String.Encoding.utf8)
-        print(token!)
+       // print(token!)
         return token!
     }
 }

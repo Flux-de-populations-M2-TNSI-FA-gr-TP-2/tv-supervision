@@ -10,27 +10,25 @@ import SwiftUI
 
 struct BuildingListView: View {
     
-    @State var model = BuildingListViewModel()
-    
-    init(){
-        WebService().getAllBuildings {
-            print($0)
-        }
-    }
-    
+    @ObservedObject var model = BuildingListViewModel()
+    let colors: [Color] = [.red, .green, .blue]
     var body: some View {
         NavigationView {
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack{
-                    ForEach(model.buildings,id: \.id){ building in
-                         BuildingBoxView(building: building)
-                    }
-                }
-            }
-        }.padding(20).navigationBarTitle("Liste des batiments")
+                    ForEach(self.model.buildings, id: \.id){ building in
+                            BuildingBoxView(building: building)
+                        }
+                }.frame(height:250).padding(.horizontal, 120)
+            }.navigationBarTitle(Text("Monitoring Université Polytechnique des Hauts de France"))
+                .background(NavigationConfigurator { nc in
+                    nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+                })
+            
+        }.navigationViewStyle(StackNavigationViewStyle()).background(Image("background-apple-tv").resizable().scaledToFill()).edgesIgnoringSafeArea(.all)
     }
     
-   
+    
 }
 
 struct BuildingBoxView : View {
@@ -39,19 +37,22 @@ struct BuildingBoxView : View {
     @State var isModal: Bool = false
     
     var body: some View {
-        VStack {
-            Button(action: {
-              print("button pressed")
-                self.isModal = true
-            }) {
-                Image("mont-houy").resizable().frame(width: 200, height:90)
-            }.sheet(isPresented: self.$isModal, content: {
-                SensorView()
-            })
-            
-            Text(building.name)
-            Text(building.address)
-        }
+        VStack(alignment: .leading) {
+            Spacer()
+            VStack(){
+                Button(action: {
+                    print("button pressed : \(self.building.id)")
+                    self.isModal = true
+                }) {
+                    Image("mont-houy").resizable().frame(width: 160, height:90)
+                }.sheet(isPresented: self.$isModal, content: {
+                    RoomListView(roomModel: RoomListViewModel(buildingId: self.building.id))
+                }).background(Color.clear)
+                Text(building.name).font(.headline).foregroundColor(.white)
+                Text(building.address).font(.subheadline).foregroundColor(.white)
+            }.background(Color.clear)
+            Spacer()
+        }.frame(width: 300)
     }
     
     

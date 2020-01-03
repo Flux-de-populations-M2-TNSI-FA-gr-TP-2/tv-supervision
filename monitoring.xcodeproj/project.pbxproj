@@ -23,6 +23,25 @@
 		4ED570CC23A91AA00092D76A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570CB23A91AA00092D76A /* Room.swift */; };
 		4ED570D023A932A70092D76A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570CF23A932A70092D76A /* WebService.swift */; };
 		4ED570D323A93A160092D76A /* BuildingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570D223A93A160092D76A /* BuildingListViewModel.swift */; };
+		4ED570D623AA171B0092D76A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570D523AA171B0092D76A /* LoginViewModel.swift */; };
+		4ED570D923AA22F20092D76A /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570D823AA22F20092D76A /* NavigationConfigurator.swift */; };
+		4ED570DB23AA33820092D76A /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570DA23AA33820092D76A /* RoomListView.swift */; };
+		4ED570DF23AA36340092D76A /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570DE23AA36340092D76A /* RoomListViewModel.swift */; };
+		4ED570E123AAA9880092D76A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570E023AAA9880092D76A /* Event.swift */; };
+		4ED570E323AAAB020092D76A /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570E223AAAB020092D76A /* Group.swift */; };
+		4EFCAE8923BA55C100D33486 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE8823BA55C100D33486 /* DateFormatter.swift */; };
+		4EFCAE8B23BA573600D33486 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE8A23BA573600D33486 /* JSONEncoder.swift */; };
+		4EFCAE8D23BA6D7000D33486 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE8C23BA6D7000D33486 /* EventListView.swift */; };
+		4EFCAE8F23BA6D8000D33486 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE8E23BA6D8000D33486 /* EventListViewModel.swift */; };
+		4EFCAE9123BA873100D33486 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9023BA873100D33486 /* EventView.swift */; };
+		4EFCAE9323BA874000D33486 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9223BA874000D33486 /* EventViewModel.swift */; };
+		4EFCAE9523BE0F0200D33486 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9423BE0F0200D33486 /* MainService.swift */; };
+		4EFCAE9723BE15F200D33486 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9623BE15F200D33486 /* Sensor.swift */; };
+		4EFCAE9923BE248C00D33486 /* SensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9823BE248C00D33486 /* SensorType.swift */; };
+		4EFCAE9B23BE249800D33486 /* SensorInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9A23BE249800D33486 /* SensorInformation.swift */; };
+		4EFCAE9D23BE9BC500D33486 /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9C23BE9BC500D33486 /* SensorViewModel.swift */; };
+		4EFCAE9F23BE9C3600D33486 /* SensorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAE9E23BE9C3600D33486 /* SensorListViewModel.swift */; };
+		4EFCAEA123BEA05500D33486 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCAEA023BEA05500D33486 /* SensorListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +84,25 @@
 		4ED570CB23A91AA00092D76A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		4ED570CF23A932A70092D76A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4ED570D223A93A160092D76A /* BuildingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListViewModel.swift; sourceTree = "<group>"; };
+		4ED570D523AA171B0092D76A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4ED570D823AA22F20092D76A /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		4ED570DA23AA33820092D76A /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
+		4ED570DE23AA36340092D76A /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
+		4ED570E023AAA9880092D76A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4ED570E223AAAB020092D76A /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4EFCAE8823BA55C100D33486 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		4EFCAE8A23BA573600D33486 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		4EFCAE8C23BA6D7000D33486 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		4EFCAE8E23BA6D8000D33486 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		4EFCAE9023BA873100D33486 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		4EFCAE9223BA874000D33486 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		4EFCAE9423BE0F0200D33486 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		4EFCAE9623BE15F200D33486 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		4EFCAE9823BE248C00D33486 /* SensorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorType.swift; sourceTree = "<group>"; };
+		4EFCAE9A23BE249800D33486 /* SensorInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInformation.swift; sourceTree = "<group>"; };
+		4EFCAE9C23BE9BC500D33486 /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
+		4EFCAE9E23BE9C3600D33486 /* SensorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListViewModel.swift; sourceTree = "<group>"; };
+		4EFCAEA023BEA05500D33486 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +198,13 @@
 				4E33917223A24EFE00D1E14D /* User.swift */,
 				4ED570C923A7BC0A0092D76A /* Building.swift */,
 				4ED570CB23A91AA00092D76A /* Room.swift */,
+				4ED570E023AAA9880092D76A /* Event.swift */,
+				4ED570E223AAAB020092D76A /* Group.swift */,
+				4EFCAE8823BA55C100D33486 /* DateFormatter.swift */,
+				4EFCAE8A23BA573600D33486 /* JSONEncoder.swift */,
+				4EFCAE9623BE15F200D33486 /* Sensor.swift */,
+				4EFCAE9823BE248C00D33486 /* SensorType.swift */,
+				4EFCAE9A23BE249800D33486 /* SensorInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +214,7 @@
 			children = (
 				4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */,
 				4ED570CF23A932A70092D76A /* WebService.swift */,
+				4EFCAE9423BE0F0200D33486 /* MainService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -177,6 +223,12 @@
 			isa = PBXGroup;
 			children = (
 				4ED570D223A93A160092D76A /* BuildingListViewModel.swift */,
+				4ED570D523AA171B0092D76A /* LoginViewModel.swift */,
+				4ED570DE23AA36340092D76A /* RoomListViewModel.swift */,
+				4EFCAE8E23BA6D8000D33486 /* EventListViewModel.swift */,
+				4EFCAE9223BA874000D33486 /* EventViewModel.swift */,
+				4EFCAE9C23BE9BC500D33486 /* SensorViewModel.swift */,
+				4EFCAE9E23BE9C3600D33486 /* SensorListViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -186,8 +238,13 @@
 			children = (
 				4E2E8E4C23A0DBFE009BF7F6 /* LoginView.swift */,
 				4E2E8E20239F9DA2009BF7F6 /* ContentView.swift */,
-				4E33917623A55C0600D1E14D /* SensorView.swift */,
 				4ED570C723A7818C0092D76A /* BuildingListView.swift */,
+				4ED570D823AA22F20092D76A /* NavigationConfigurator.swift */,
+				4ED570DA23AA33820092D76A /* RoomListView.swift */,
+				4EFCAE8C23BA6D7000D33486 /* EventListView.swift */,
+				4EFCAE9023BA873100D33486 /* EventView.swift */,
+				4E33917623A55C0600D1E14D /* SensorView.swift */,
+				4EFCAEA023BEA05500D33486 /* SensorListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,17 +380,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFCAE8923BA55C100D33486 /* DateFormatter.swift in Sources */,
 				4E33917723A55C0600D1E14D /* SensorView.swift in Sources */,
+				4EFCAE9523BE0F0200D33486 /* MainService.swift in Sources */,
+				4ED570E323AAAB020092D76A /* Group.swift in Sources */,
+				4ED570DB23AA33820092D76A /* RoomListView.swift in Sources */,
 				4E2E8E4D23A0DBFE009BF7F6 /* LoginView.swift in Sources */,
+				4EFCAE9723BE15F200D33486 /* Sensor.swift in Sources */,
+				4EFCAE8B23BA573600D33486 /* JSONEncoder.swift in Sources */,
+				4EFCAEA123BEA05500D33486 /* SensorListView.swift in Sources */,
 				4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */,
+				4ED570D923AA22F20092D76A /* NavigationConfigurator.swift in Sources */,
 				4E2E8E21239F9DA2009BF7F6 /* ContentView.swift in Sources */,
 				4ED570D323A93A160092D76A /* BuildingListViewModel.swift in Sources */,
+				4ED570DF23AA36340092D76A /* RoomListViewModel.swift in Sources */,
+				4EFCAE9323BA874000D33486 /* EventViewModel.swift in Sources */,
+				4ED570E123AAA9880092D76A /* Event.swift in Sources */,
+				4EFCAE8F23BA6D8000D33486 /* EventListViewModel.swift in Sources */,
+				4EFCAE9123BA873100D33486 /* EventView.swift in Sources */,
 				4ED570D023A932A70092D76A /* WebService.swift in Sources */,
+				4EFCAE9F23BE9C3600D33486 /* SensorListViewModel.swift in Sources */,
+				4EFCAE9D23BE9BC500D33486 /* SensorViewModel.swift in Sources */,
 				4E2E8E1F239F9DA2009BF7F6 /* AppDelegate.swift in Sources */,
 				4ED570CA23A7BC0A0092D76A /* Building.swift in Sources */,
+				4EFCAE8D23BA6D7000D33486 /* EventListView.swift in Sources */,
+				4ED570D623AA171B0092D76A /* LoginViewModel.swift in Sources */,
 				4ED570C823A7818C0092D76A /* BuildingListView.swift in Sources */,
 				4E33917323A24EFE00D1E14D /* User.swift in Sources */,
 				4ED570CC23A91AA00092D76A /* Room.swift in Sources */,
+				4EFCAE9923BE248C00D33486 /* SensorType.swift in Sources */,
+				4EFCAE9B23BE249800D33486 /* SensorInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
