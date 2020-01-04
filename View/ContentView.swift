@@ -11,7 +11,11 @@ import SwiftUI
 struct ContentView: View {
     @State var presentBuilding: Bool = false
     @State var presentEvents: Bool = false
+    @State var presentInformations: Bool = false
     @State var logoutButton: Bool = false
+    
+    var keyChainService: KeyChainService = KeyChainService()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 300){
@@ -21,8 +25,8 @@ struct ContentView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    Spacer()
                     Button("Déconnexion"){
+                        self.keyChainService.delete(for: "access_token")
                         self.logoutButton = true
                     }.sheet(isPresented: $logoutButton, content: {
                         LoginView()
@@ -43,13 +47,13 @@ struct ContentView: View {
                         EventListView()
                     }).foregroundColor(.white).background(Color.black)
                     Button("Informations") {
-                        self.presentBuilding = true
-                    }.sheet(isPresented: $presentBuilding, content: {
-                        BuildingListView()
+                        self.presentInformations = true
+                    }.sheet(isPresented: $presentInformations, content: {
+                        InformationView()
                     }).foregroundColor(.white).background(Color.black)
                 }
                 Spacer()
-            }.navigationBarTitle(Text("Monitoring Université Polytechnique des Hauts de France"))
+            }.navigationBarTitle(Text("OMENI - Monitoring Université Polytechnique des Hauts de France"))
                 .background(NavigationConfigurator { nc in
                     nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                 })

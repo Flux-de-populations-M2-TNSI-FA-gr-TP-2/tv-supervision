@@ -40,7 +40,7 @@ struct RoomListView: View {
                 } else {
                     Text("Aucun évènement pour ce batiment").font(.subheadline).foregroundColor(Color.white)
                 }
-            }.navigationBarTitle(Text("Détails du batiment " + roomModel.name))
+            }.navigationBarTitle(Text("OMENI - Détails du batiment " + roomModel.name))
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })

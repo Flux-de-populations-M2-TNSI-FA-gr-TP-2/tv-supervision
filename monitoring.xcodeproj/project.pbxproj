@@ -18,6 +18,9 @@
 		4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */; };
 		4E33917323A24EFE00D1E14D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33917223A24EFE00D1E14D /* User.swift */; };
 		4E33917723A55C0600D1E14D /* SensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33917623A55C0600D1E14D /* SensorView.swift */; };
+		4E99966523C0B3EC003DA5FC /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99966423C0B3EC003DA5FC /* InformationView.swift */; };
+		4E99966723C0B3F9003DA5FC /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99966623C0B3F9003DA5FC /* InformationViewModel.swift */; };
+		4E99966923C0B418003DA5FC /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99966823C0B418003DA5FC /* Information.swift */; };
 		4ED570C823A7818C0092D76A /* BuildingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570C723A7818C0092D76A /* BuildingListView.swift */; };
 		4ED570CA23A7BC0A0092D76A /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570C923A7BC0A0092D76A /* Building.swift */; };
 		4ED570CC23A91AA00092D76A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED570CB23A91AA00092D76A /* Room.swift */; };
@@ -79,6 +82,9 @@
 		4E2E8E4E23A0EC00009BF7F6 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		4E33917223A24EFE00D1E14D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4E33917623A55C0600D1E14D /* SensorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorView.swift; sourceTree = "<group>"; };
+		4E99966423C0B3EC003DA5FC /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		4E99966623C0B3F9003DA5FC /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		4E99966823C0B418003DA5FC /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		4ED570C723A7818C0092D76A /* BuildingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListView.swift; sourceTree = "<group>"; };
 		4ED570C923A7BC0A0092D76A /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4ED570CB23A91AA00092D76A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 				4EFCAE9623BE15F200D33486 /* Sensor.swift */,
 				4EFCAE9823BE248C00D33486 /* SensorType.swift */,
 				4EFCAE9A23BE249800D33486 /* SensorInformation.swift */,
+				4E99966823C0B418003DA5FC /* Information.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 				4EFCAE9223BA874000D33486 /* EventViewModel.swift */,
 				4EFCAE9C23BE9BC500D33486 /* SensorViewModel.swift */,
 				4EFCAE9E23BE9C3600D33486 /* SensorListViewModel.swift */,
+				4E99966623C0B3F9003DA5FC /* InformationViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				4EFCAE9023BA873100D33486 /* EventView.swift */,
 				4E33917623A55C0600D1E14D /* SensorView.swift */,
 				4EFCAEA023BEA05500D33486 /* SensorListView.swift */,
+				4E99966423C0B3EC003DA5FC /* InformationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E99966923C0B418003DA5FC /* Information.swift in Sources */,
 				4EFCAE8923BA55C100D33486 /* DateFormatter.swift in Sources */,
 				4E33917723A55C0600D1E14D /* SensorView.swift in Sources */,
 				4EFCAE9523BE0F0200D33486 /* MainService.swift in Sources */,
@@ -387,6 +397,7 @@
 				4ED570DB23AA33820092D76A /* RoomListView.swift in Sources */,
 				4E2E8E4D23A0DBFE009BF7F6 /* LoginView.swift in Sources */,
 				4EFCAE9723BE15F200D33486 /* Sensor.swift in Sources */,
+				4E99966723C0B3F9003DA5FC /* InformationViewModel.swift in Sources */,
 				4EFCAE8B23BA573600D33486 /* JSONEncoder.swift in Sources */,
 				4EFCAEA123BEA05500D33486 /* SensorListView.swift in Sources */,
 				4E2E8E4F23A0EC00009BF7F6 /* KeyChainService.swift in Sources */,
@@ -399,6 +410,7 @@
 				4EFCAE8F23BA6D8000D33486 /* EventListViewModel.swift in Sources */,
 				4EFCAE9123BA873100D33486 /* EventView.swift in Sources */,
 				4ED570D023A932A70092D76A /* WebService.swift in Sources */,
+				4E99966523C0B3EC003DA5FC /* InformationView.swift in Sources */,
 				4EFCAE9F23BE9C3600D33486 /* SensorListViewModel.swift in Sources */,
 				4EFCAE9D23BE9BC500D33486 /* SensorViewModel.swift in Sources */,
 				4E2E8E1F239F9DA2009BF7F6 /* AppDelegate.swift in Sources */,

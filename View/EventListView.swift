@@ -22,7 +22,7 @@ struct EventListView: View {
                         }
                     }.padding(.horizontal, 150).frame(height:220)
                 }
-            }.navigationBarTitle(Text("Liste des évènements"))
+            }.navigationBarTitle(Text("OMENI - Liste des évènements"))
                 .background(NavigationConfigurator { nc in
                     nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                 })

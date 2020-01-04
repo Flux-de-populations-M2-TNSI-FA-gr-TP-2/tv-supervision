@@ -25,32 +25,26 @@ class WebService {
         request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if let dictionary = json as? [String: Any] {
                     let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"] as! [[String:Any]])
                     let decoder = JSONDecoder()
-                    print("dictionnary : \(dictionary)")
-                    print("jsondata : \(jsonData)")
                     decoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
-                     let buildings = try! decoder.decode([Building].self,  from: jsonData)
-                    print("buildings : \(buildings)")
+                    let buildings = try! decoder.decode([Building].self,  from: jsonData)
                     DispatchQueue.main.async {
                         completion(buildings)
                     }
                 }
-
+                
             } catch let error as NSError {
                 print(error)
             }
-                                        
+            
         }.resume()
     }
     
     func getABuilding(buildingId: Int, completion: @escaping (Building) -> ()){
-        print("building dans call : \(buildingId)")
         let keyChainService = KeyChainService()
         guard let url = URL(string : WebService.server + "location/\(buildingId)")
             else {
@@ -61,7 +55,6 @@ class WebService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let token = keyChainService.retriveToken(for: "access_token")
         request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
-        
         URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             let decoder = JSONDecoder()
@@ -69,21 +62,19 @@ class WebService {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if let dictionary = json as? [String: Any] {
-                    print("dictionnaire getallrooms : \(dictionary)")
                     let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"])
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
                     let building = try! jsonDecoder.decode(Building.self,  from: jsonData)
-                    print(building)
                     DispatchQueue.main.async {
                         completion(building)
                     }
                 }
-
+                
             } catch let error as NSError {
                 print(error)
             }
-                                        
+            
         }.resume()
     }
     
@@ -100,8 +91,6 @@ class WebService {
         request.httpBody = parameters.data(using: String.Encoding.utf8);
         URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if let dictionary = json as? [String: Any] {
@@ -122,38 +111,36 @@ class WebService {
     }
     
     func getEvents(completion: @escaping ([Event]) -> ()){
-            let keyChainService = KeyChainService()
-            guard let url = URL(string : WebService.server + "event")
-                else {
-                    fatalError("url is wrong !!!")
-            }
-            let request = NSMutableURLRequest(url: url)
-            request.httpMethod = "GET"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            let token = keyChainService.retriveToken(for: "access_token")
-            request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
-            
-            URLSession.shared.dataTask(with: request as URLRequest) {
-                data, response, error in
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                    if let dictionary = json as? [String: Any] {
-                        let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"])
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
-                        let events = try! jsonDecoder.decode([Event].self,  from: jsonData)
-                        print(events)
-                        DispatchQueue.main.async {
-                            completion(events)
-                        }
-                    }
-
-                } catch let error as NSError {
-                    print(error)
-                }
-                                            
-            }.resume()
+        let keyChainService = KeyChainService()
+        guard let url = URL(string : WebService.server + "event")
+            else {
+                fatalError("url is wrong !!!")
         }
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let token = keyChainService.retriveToken(for: "access_token")
+        request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                if let dictionary = json as? [String: Any] {
+                    let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"])
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
+                    let events = try! jsonDecoder.decode([Event].self,  from: jsonData)
+                    DispatchQueue.main.async {
+                        completion(events)
+                    }
+                }
+                
+            } catch let error as NSError {
+                print(error)
+            }
+            
+        }.resume()
+    }
     
     func getAnEvent(eventId: Int,completion: @escaping (Event) -> ()){
         let keyChainService = KeyChainService()
@@ -166,7 +153,6 @@ class WebService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let token = keyChainService.retriveToken(for: "access_token")
         request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
-        
         URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             do {
@@ -176,21 +162,19 @@ class WebService {
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
                     let event = try! jsonDecoder.decode(Event.self,  from: jsonData)
-                    print(event)
                     DispatchQueue.main.async {
                         completion(event)
                     }
                 }
-
+                
             } catch let error as NSError {
                 print(error)
             }
-                                        
+            
         }.resume()
     }
     
     func getSensorsFromRoom(roomId: Int, completion: @escaping ([Sensor]?) -> ()){
-        print("building dans call : \(roomId)")
         let keyChainService = KeyChainService()
         guard let url = URL(string : WebService.server + "room/\(roomId)")
             else {
@@ -209,7 +193,6 @@ class WebService {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if let dictionary = json as? [String: Any] {
-                    print("dictionnaire getallrooms : \(dictionary)")
                     let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"])
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
@@ -218,16 +201,15 @@ class WebService {
                         completion(room.sensors)
                     }
                 }
-
+                
             } catch let error as NSError {
                 print(error)
             }
-                                        
+            
         }.resume()
     }
     
     func getASensor(sensorId: Int, completion: @escaping (Sensor) -> ()){
-        print("building dans call : \(sensorId)")
         let keyChainService = KeyChainService()
         guard let url = URL(string : WebService.server + "sensor/\(sensorId)")
             else {
@@ -244,9 +226,7 @@ class WebService {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if let dictionary = json as? [String: Any] {
-                    print("dictionnaire getallrooms : \(dictionary)")
                     let dataa = dictionary["data"] as? [String: Any]
-                    print(dataa!["sensor"])
                     let jsonData = try JSONSerialization.data(withJSONObject: dataa!["sensor"])
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
@@ -255,11 +235,45 @@ class WebService {
                         completion(sensor)
                     }
                 }
-
+                
             } catch let error as NSError {
                 print(error)
             }
-                                        
+            
+        }.resume()
+    }
+    
+    func getInformations(completion: @escaping (Information?) -> ()){
+        let keyChainService = KeyChainService()
+        guard let url = URL(string : WebService.server + "general/count")
+            else {
+                fatalError("url is wrong !!!")
+        }
+        let request = NSMutableURLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let token = keyChainService.retriveToken(for: "access_token")
+        request.setValue("Bearer " + token!, forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                if let dictionary = json as? [String: Any] {
+                    let jsonData = try JSONSerialization.data(withJSONObject: dictionary["data"])
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategyFormatters = [DateFormatter.standard]
+                    let information = try! jsonDecoder.decode(Information.self,  from: jsonData)
+                    DispatchQueue.main.async {
+                        completion(information)
+                    }
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            
         }.resume()
     }
 }

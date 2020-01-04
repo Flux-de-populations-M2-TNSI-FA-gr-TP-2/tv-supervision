@@ -15,13 +15,15 @@ class User : Codable, Identifiable {
     var lastname :String? = ""
     var email :String = ""
     var password :String = ""
+    var role: String = ""
     
-    init(id: Int, firstname: String, lastname: String, email: String, password: String){
+    init(id: Int, firstname: String, lastname: String, email: String, password: String, role: String){
         self.id = id
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
         self.password = password
+        self.role = role
     }
     
 }

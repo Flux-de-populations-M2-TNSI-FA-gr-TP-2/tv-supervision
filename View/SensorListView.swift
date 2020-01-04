@@ -24,9 +24,9 @@ struct SensorListView: View {
                         }
                     }.padding(.horizontal, 150).frame(height:220)
                 }else {
-                    Text("Aucun capteur disponible pour cette batiment").font(.subheadline).foregroundColor(Color.white)
+                    Text("Aucun capteur disponible pour cette salle.").font(.subheadline).foregroundColor(Color.white)
                 }
-            }.navigationBarTitle(Text("Liste des capteurs"))
+            }.navigationBarTitle(Text("OMENI - Liste des capteurs"))
                 .background(NavigationConfigurator { nc in
                     nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                 })

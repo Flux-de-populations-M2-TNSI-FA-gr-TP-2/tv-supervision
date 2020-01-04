@@ -59,10 +59,10 @@ struct SensorView: View {
                     }
                 }
                 if(self.sensor.sensor.infos?.wakeUpInterval == nil){
-                    Text("Aucune donnée provenant des capteurs ne peut être affichée.").font(.system(size: 60)).foregroundColor(Color.white)
+                    Text("Aucune donnée provenant du capteur ne peut être affichée.").font(.system(size: 60)).foregroundColor(Color.white)
                 }
                 
-            }.navigationBarTitle(Text("Capteur \"\(self.sensor.sensor.name ?? "???")\""))
+            }.navigationBarTitle(Text("OMENI - Capteur \"\(self.sensor.sensor.name ?? "???")\""))
                     .background(NavigationConfigurator { nc in
                         nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                     })

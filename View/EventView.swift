@@ -16,7 +16,7 @@ struct EventView: View {
     var body: some View {
         NavigationView {
             VStack() {
-                Text("debut le : \(MainService.formatDate(date: eventModel.event.start))").foregroundColor(Color.white)
+                Text("début le : \(MainService.formatDate(date: eventModel.event.start))").foregroundColor(Color.white)
                 Text("Fin le \(MainService.formatDate(date: eventModel.event.end))").foregroundColor(Color.white)
                 Text("Statut de l'évènement : \(eventModel.event.status)").foregroundColor(Color.white)
                 if(eventModel.event.event_groups != nil) {
@@ -26,7 +26,7 @@ struct EventView: View {
                         Text("- \(group.name)").foregroundColor(Color.white)
                     }
                 }
-            }.navigationBarTitle(Text("Détails de l'évènement \"\(eventModel.event.name)\"").foregroundColor(Color.white))
+            }.navigationBarTitle(Text("OMENI - Détails de l'évènement \"\(eventModel.event.name)\"").foregroundColor(Color.white))
                 .background(NavigationConfigurator { nc in
                     nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                 })

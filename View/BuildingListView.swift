@@ -20,7 +20,7 @@ struct BuildingListView: View {
                             BuildingBoxView(building: building)
                         }
                 }.frame(height:250).padding(.horizontal, 120)
-            }.navigationBarTitle(Text("Monitoring Université Polytechnique des Hauts de France"))
+            }.navigationBarTitle(Text("OMENI - Monitoring Université Polytechnique des Hauts de France"))
                 .background(NavigationConfigurator { nc in
                     nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
                 })

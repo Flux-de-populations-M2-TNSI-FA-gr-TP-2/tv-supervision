@@ -36,9 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func getLoginFromSecureStorage() -> Bool {
         //keyChainService.save("123456", for: "userJwtToken")
-     if( keyChainService.delete(for: "access_token")){
+     /*if( keyChainService.delete(for: "access_token")){
             print("token deleted")
-        }
+        }*/
         if(keyChainService.retriveToken(for: "access_token") != nil) {
             jwtToken = keyChainService.retriveToken(for: "access_token")!;
             return true
