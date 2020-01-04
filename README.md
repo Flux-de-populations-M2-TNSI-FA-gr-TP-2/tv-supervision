@@ -4,12 +4,18 @@ Application destinée à gérer le monitoring (affichage de données) sur une ap
 
 Cette application a été developpée avec SWIFTUI pour les interfaces, et Swift 5.1.
 
+Technologie interface : 
+- SwiftUI
+
+Language : 
+- Swift 5.1
+
 Logiciel de développement : 
-- xCode
+- xCode 11.3
 
 Récupération des informations : 
 - API avec format des données en JSON
 
 Environnement de déploiement : 
-- Apple TV 4K
+- Apple TV 4K tvOS 13.3
 
